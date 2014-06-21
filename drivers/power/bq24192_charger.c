@@ -404,13 +404,10 @@ static int bq24192_set_input_i_limit(struct bq24192_chip *chip, int ma)
 		chip->saved_input_i_ma = ma;
 
 	chip->therm_mitigation = false;
-<<<<<<< HEAD
+
 	pr_debug("input current limit = %d setting 0x%02x\n", ma, temp);
-=======
-	pr_info("input current limit = %d setting 0x%02x\n", ma, temp);
 #endif
 
->>>>>>> fb1a015... fastcharge: initial Nexus 5 adaptation
 	return bq24192_masked_write(chip->client, INPUT_SRC_CONT_REG,
 			INPUT_CURRENT_LIMIT_MASK, temp);
 }
